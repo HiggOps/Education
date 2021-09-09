@@ -3,7 +3,7 @@
 <body>
 
 <?php
-// Your code here!
+// pierwsza lekcja
 echo 'zsł <br>';
 $name = "Janusz";
 echo "Imie: $name";
@@ -54,6 +54,37 @@ ETYKIETA;
 $name="Łukasz";
 echo "Imię: $name, Nazwisko: Więckowski <br>";
 echo "Imię: \$name, Nazwisko: Więckowski <br>";
+
+	//druga lekcja
+    //wersja PHP 7.1.1
+    echo PHP_VERSION;
+    
+    echo "<hr>";
+    //potęgowanie
+    $pow = 2**10;
+    echo $pow;
+
+	echo "<hr>";
+    /*porównywanie, jeśli:
+    liczba x jest większa od y wynik = 1
+	liczba x je równa liczbie y wynik = 0
+    liczba x jest mniejsza od y wynik = -1
+    */
+    $x=10;
+    $y=3;
+    echo $x<=>$y;
+    
+    echo "<hr";
+    //porównywanie i identyczność
+    
+    $x = 1;
+    $y = 1.0;
+    
+    if ($x === $y) {
+    	echo "Równe";
+    } else {
+    	echo "Różne";
+    };
 ?>
 </body>
 </html>
