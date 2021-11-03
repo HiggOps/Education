@@ -9,7 +9,7 @@
 <body>
     <?php
         ob_clean();
-        require_once './7_functions.php';
+        require_once './7_Complex_function.php';
     ?>
     <form method="post">
         Od: <input type="date" name="dateFirst"><br><br>
@@ -37,52 +37,22 @@
                 echo (int)$secondDate."<br>";
 
                 //dni, miesiące, lata
-                $compare = $firstDate > $secondDate;
+                $numberOfDays = abs($firstDate - $secondDate);
+                (bool)$compare = $firstDate > $secondDate;
+                
                 switch($compare) {
                     case true:
-                        echo "true"."<br>";
-                        numberOfDays($firstDate, $secondDate);
-                        /*
-                        $numberOfDays = $firstDate - $secondDate;
-                        echo "Różnica wynosi: ".$numberOfDays;
-                        //pierwsza data jest mniejszą wartością (czyli była wcześniej)
-                        */
-                                                
-                        break;
+                        //echo "true"."<br>";
+                        echo daysDifference($numberOfDays, $secondYear, $secondMonth);
 
+                        break;
                     case false:
-                        echo "false"."<br>";
-                        numberOfDays($secondDate, $firstDate);
-                        /*
-                        //druga data jest mniejszą wartością (czyli była wcześniej)
-                        $numberOfDays = $secondDate - $firstDate;
-                        echo "Różnica wynosi: ".$numberOfDays;
-                        */
+                        //echo "false"."<br>";
+                        echo daysDifference($numberOfDays, $firstYear, $firstMonth);
 
                         break;
                 }
-                /*
-                switch ($_POST['geometricFigure']) {
-                    case 'kwadrat':
-                        header('location: ./Programowanie 2021-03-30 - 5_square.php');
-                        break;
-                    case 'prostokat':
-                        header('location: ./Programowanie 2021-09-30 - 5_rectangle.php');
-                        break;
-                }
-                $sideA = str_replace(',','.', $_GET['sideA']);
-                $sideB = str_replace(',','.', $_GET['sideB']);
-                $area = $sideA * $sideB;
-                $perimeter = $sideA * 2 + $sideB * 2;
-                echo <<< RESULT
-                <hr>
-                Pole wynosi: $area <br>
-                Obwód wynosi: $perimeter <br>
-            RESULT;
-            
-            } else {
-                echo "Wypełnij pola";
-                */
+
             }
             
         }
