@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zadanie 2</title>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta author="Więckowski Łukasz">
+</head>
+
+<body>
+    Podaj imię i nazwisko: <br>
+    <input type="text" id="dane"><br> Podaj klasę:<br>
+    <input type="text" id="klasa"><br> Podaj e-mail:<br>
+    <input type="text" id="email"><br>
+    <input type="button" id="button" value="Kliknij"><br>
+    <div id="output"></div>
+
+    <script>
+        var button = document.getElementById("button");
+        var output = document.getElementById("output");
+        button.onclick = function() {
+            var dane = document.getElementById("dane").value.toUpperCase();
+            var klasa = document.getElementById("klasa").value.toLowerCase();
+            var email = document.getElementById("email").value;
+            var ifA = email.search("@");
+            if (ifA == -1) {
+                alert("Błędny adres e-mail!!")
+            } else {
+                output.innerHTML = "Witaj: " + dane + "<br>" + "Jesteś uczniem " + klasa + " klasy<br>" + "Twój adres email: |<span style='font-weight: bold; color: blue;'>" + email;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

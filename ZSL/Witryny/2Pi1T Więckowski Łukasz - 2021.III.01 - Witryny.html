@@ -1,0 +1,104 @@
+
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta author="Więckowski Łukasz">
+    <style>
+        div{
+            width: 300px;
+            height: 20px;
+            padding: 5px;
+        }
+        .overflow {
+            background-color: red;
+            overflow: hidden;
+            transition-delay: 300ms;
+            transition-duration: 500ms;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class="overflow" id="1">
+        Najeźd, żeby rozwinąć >>
+        <br> <br>
+        Tytuł
+        <br> <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, totam sequi expedita suscipit iste nostrum, harum est aspernatur mollitia ad necessitatibus repellendus explicabo debitis dignissimos architecto ratione commodi quasi aperiam.
+        <p id="clock"></p>
+    </div>
+    <br>
+    <div class="overflow" id="2">
+        Kliknij dwa razy, żeby rozwinąć >>
+        <br> <br>
+        Tytuł
+        <br> <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, totam sequi expedita suscipit iste nostrum, harum est aspernatur mollitia ad necessitatibus repellendus explicabo debitis dignissimos architecto ratione commodi quasi aperiam.
+    </div>
+    <br>
+    <div class="overflow" id="3">
+        Kliknij, żeby rozwinąć >>
+        <br> <br>
+        Tytuł
+        <br> <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, totam sequi expedita suscipit iste nostrum, harum est aspernatur mollitia ad necessitatibus repellendus explicabo debitis dignissimos architecto ratione commodi quasi aperiam.
+    </div>
+    <br>
+    <div id="4"></div>
+    <script>
+        var thirdTrigger=document.getElementById("1");
+        var thirdValue=0;
+        thirdTrigger.onmouseover=function() {
+            if (thirdValue==0) {
+                thirdTrigger.style.height=400;
+                thirdValue=1;
+            } else {
+                thirdTrigger.style.height=20;
+                thirdValue=0;
+            }
+        }
+
+        var secondTrigger=document.getElementById("2");
+        var secondValue=0;
+        secondTrigger.ondblclick=function() {
+            if(secondValue==0) {
+                secondTrigger.style.height=400;
+                secondValue=1;
+            } else {
+                secondTrigger.style.height=20;
+                secondValue=0;
+            }
+        }
+
+        var firstTrigger=document.getElementById("3");
+        var firstValue=0;
+        firstTrigger.onclick=function() {
+            if(firstValue==0) {
+                firstTrigger.style.height=400;
+                firstValue=1;
+            } else {
+                firstTrigger.style.height=20;
+                firstValue=0;
+            }
+        }
+
+        setInterval(function(){
+        var now=new Date();
+        var hour=now.getHours();
+        var minute=now.getMinutes();
+        var second= now.getSeconds();
+        var clock=document.getElementById("clock");
+        clock.innerHTML=zero(hour)+":"+zero(minute)+":"+zero(second)
+        },1000)
+        function zero(i){
+            if(i<10){
+                i="0"+i.toString();
+            }
+            return i;
+        }
+    </script>
+</body>
+</html>

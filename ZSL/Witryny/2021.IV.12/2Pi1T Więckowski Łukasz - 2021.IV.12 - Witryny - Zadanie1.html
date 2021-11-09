@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta author="Więckowski Łukasz">
+</head>
+
+<body>
+    <input type="text"id="number"><br><br>
+    <button id="button">Kliknij</button><br><br>
+    <div id="output">Wynik: </div>
+
+    <script> 
+        var output = document.getElementById("output");
+        var button = document.getElementById("button");
+
+        button.onclick = function(){
+            var number = document.getElementById("number").value;
+            if (number == "") {
+                alert("Nie podano liczby!");
+            } else {
+                number = Math.abs(number);
+            };
+            output.innerHTML = "Wartośc bewzględna podanej liczby to: " + number;
+        };
+        
+    </script>
+</body>
+
+</html>

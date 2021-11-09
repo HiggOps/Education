@@ -1,0 +1,31 @@
+div {
+
+    font-family:Arial;
+    font-size: 18;
+}
+#banner {
+    border: 1px solid black;
+    width: 779px;
+    height: 159px;
+    background-color:white;
+}
+#left {
+    border:1px solid black;
+    box-sizing:border-box;
+    width: 40%;
+    height: 65%;
+    background-color:white;
+    float: left;
+}
+#right {
+    border:1px solid black;
+    box-sizing:border-box;
+    width: 60%;
+    height: 65%;
+    background-color:white;
+    float:left;
+}
+a{
+    text-decoration:none;
+    color: black;
+}
