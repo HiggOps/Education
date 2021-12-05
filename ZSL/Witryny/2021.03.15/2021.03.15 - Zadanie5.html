@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta author="Więckowski Łukasz">
+</head>
+
+<body>
+    <div id="main"></div>
+    <script>
+        var liczby1 = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+        var liczby2 = new Array(10, 11, 12 , 13 , 14, 15, 16, 17, 18, 19);
+            document.write("Tablice: <br>" + liczby1 + "<br>" + liczby2 + "<br>");
+        liczby1.reverse();
+            document.write("Tablica I w odwrotenj kolejności: <br>" + liczby1 + "<br>");
+        liczby1.sort();
+            document.write("Posortowana tablica I: <br>" + liczby1 + "<br>");
+        liczby2.sort();
+            document.write("Najmniejszy element tablicy II: <br>" + liczby2[0] + "<br>");
+            document.write("Najwiekszy element tablicy II: <br>" + liczby2[9] + "<br>");
+        liczby2.splice(5,2, 0, 0);
+            document.write("Tablica II z nowymi elementami w indeksach 5 i 6 po przednim ich usunięciu: <br>" + liczby2 + "<br>");
+        liczby1.shift();
+        liczby1.push(10);
+            document.write("Tablica I po usunięciu pierwszego elementu i dodaniu nowego jako ostatni element tablicy: <br>" + liczby1 + "<br>");
+        var liczby3 = new Array()
+        for (var i = 0; i < 10; i++) {
+            liczby3.push(liczby1[i] + liczby2[i]);
+        }
+            document.write("Tablica III: <br>" + liczby3 + "<br>");
+        document.write("Liczby parzyste w tablicy III: <br>");
+        for (var i = 0; i < 10; i++) {
+            var x = liczby3[i];
+            if (x % 2 == 0) {
+                document.write(liczby3[i] + ", ");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

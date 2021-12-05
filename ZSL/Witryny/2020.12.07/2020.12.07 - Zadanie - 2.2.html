@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta author="Więckowski Łukasz">
+</head>
+
+<body>
+    <div id="div"></div>
+    <script>
+        var a = parseInt(prompt("Podaj a"));
+        while (a == 0) {
+            var a = parseInt(prompt("A nie może być zerem. Podaj a"));
+        }
+        var b = parseInt(prompt("Podaj b"));
+        var div = document.getElementById("div");
+        var x = (b * -1) / a;
+        div.innerHTML += x;
+    </script>
+
+</body>
+
+</html>

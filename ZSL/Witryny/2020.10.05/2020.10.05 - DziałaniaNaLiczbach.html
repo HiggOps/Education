@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta author="Więckowski Łukasz">
+        <style>
+            span{color:red;font-size:27};
+        </style>
+    </head>
+
+    <body>
+        Więckowski Łukasz <br>
+
+        <script>
+            var liczba1=parseInt(prompt("podaj liczbę 1"));
+            var liczba2=parseInt(prompt("podaj liczbę 2"));
+            
+            var r=liczba1-liczba2;
+            var m=liczba1*liczba2;
+            var d=liczba1+liczba2;
+            if(liczba2==0){
+                liczba2=1; document.write("<span>Wpisałeś liczbę 2 jako 0 na potrzeby dzielenia przyjmiemy wartość 1.</span><br>")
+            } else {
+                 liczba2=liczba2 
+            };
+            var dz=liczba1/liczba2;
+            //document.write("Witaj twoje liczby to: " + liczba1 +" i "+ liczba2);
+            document.write("Twoje liczby to: " + liczba1 + " i " + liczba2 
+            + "<br>różnica tych dwóch liczb wynosi: <span>"+ r 
+            + "</span><br>iloczyn tych dwóch liczb wynosi: <span>" + m
+            + "</span><br>suma tych dwóch liczb wynosi: <span>" + d
+            + "</span><br>iloraz tych dwóch liczb wynosi: <span>" + dz +"</span>");
+        </script>
+    </body>
+</html>

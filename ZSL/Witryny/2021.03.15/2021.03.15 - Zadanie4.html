@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta author="Więckowski Łukasz">
+</head>
+
+<body>
+    <div id="main"></div>
+    <script>
+        var liczby1 = new Array(1, 2, 3);
+        var liczby2 = new Array(4, 5, 6);
+        var liczby3 = new Array(7, 8, 9);
+        var liczbyW = liczby1.concat(liczby2, liczby3);
+        document.write(liczbyW + "<br>");
+        if (liczbyW.indexOf(3) !== -1){
+            document.write(liczbyW.indexOf(3) + "<br>");
+        };
+        if (liczbyW.lastIndexOf(7) !== -1) {
+            document.write(liczbyW.lastIndexOf(7) + "<br>");
+        };
+    </script>
+</body>
+
+</html>
