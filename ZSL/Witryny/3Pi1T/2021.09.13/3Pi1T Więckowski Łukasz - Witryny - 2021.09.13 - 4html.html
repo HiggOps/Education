@@ -1,0 +1,16 @@
+<html>
+
+<body>
+		<!--zad4-->
+	<div id="zad4" style="width: 100px; height: 100px"> </div><br>
+	Podaj kolor: <input type="text" id="text">
+	<input type="button" id="button" value="kliknij">
+	<script>
+		var button = document.getElementById("button");
+		button.onclick=function() {
+			var text = document.getElementById("text");
+			document.getElementById("zad4").style.backgroundColor = text.value;
+		}
+	</script>
+</body>
+</html>

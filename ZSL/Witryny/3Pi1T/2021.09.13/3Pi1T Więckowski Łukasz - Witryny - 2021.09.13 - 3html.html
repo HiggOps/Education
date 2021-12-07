@@ -1,0 +1,22 @@
+<html>
+
+<body>
+		<!--zad3-->
+	<div id="zad3"> </div>
+	<script>
+		var a = parseInt(prompt("Podaj liczbę"));
+		var b = parseInt(prompt("Podaj drugą liczbę"));
+		if (a < 0 && b < 0) {
+			var output = a+b;
+			document.getElementById("zad3").innerHTML=output;
+		} else if (b == 0) {
+				document.getElementById("zad3").innerHTML="Nie można dzielić przez 0";
+			} else {
+				var output = a/b;
+				document.getElementById("zad3").innerHTML=output;
+			}
+		
+	</script>
+
+</body>
+</html>

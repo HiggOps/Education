@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a src="./index.html"><img src="./images/baner.jpg" height="100px" width="800px"></a> 
+    </header>
+    
+    <nav>
+        <a href="strona1.html"><p>- Proste Działania</p></a>
+        <a href="strona2.php"><p>- Potęgowanie</p></a>
+    </nav>
+
+    <div id="main">
+    <h1>PROSTE DZIAŁANIA</h1>
+    <form>
+        <p><i>Podaj pierwszą liczbę:<input type="number" id="num1"></i></p>
+        <p><i>Podaj drugą liczbę:<input type="number" id="num2"></i></p>
+        <p>
+            <button onclick="f (1)">DODAWANIE</button>  
+            <button onclick="f (2)">ODEJMOWANIE</button> 
+            <button onclick="f (3)">MNOŻENIE</button>  
+            <button onclick="f (4)">DZIELENIE</button>
+        </p>
+    </form>
+    </div>
+    <div id="output"></div>
+    <script>
+        function f (x) {
+            var a = parseFloat(num1.value);
+            var b = parseFloat(num2.value);
+            var output;
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("output").innerHTML="Podaj dwie liczby";
+            } else {
+                switch (x) {
+                    case 1:
+                        var output=a+b;
+                        break;
+                    case 2:
+                        var output=a-b;
+                        break;
+                    case 3:
+                        var output=a*b;
+                        break;
+                    case 4:
+                        if(b != 0) {
+                            var output=a/b;
+                        }
+                        break;
+                }
+                document.getElementById("output").innerHTML="Wynik działania wynosi: "+output;
+            } 
+        
+        }
+    </script>
+</body>
+</html>

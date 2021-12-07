@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="div"></div>
+
+<input type="text" id="inSum"><br>
+<input type="button" id="button" value="Sprzawdź">
+
+    <script>
+
+    var div = document.getElementById("div");
+    var inSumText = document.getElementById("inSum");
+    var button = document.getElementById("button");
+
+    var randomNumber1 = Math.floor(Math.random() * 11);
+    var randomNumber2 = Math.floor(Math.random() * 11);
+    var outSumValue = randomNumber1 + randomNumber2;
+    
+    div.innerHTML=randomNumber1+"+"+randomNumber2+"=";
+    inSumText.onclick = function() {
+        inSumText.style.backgroundColor="white";
+    }
+    button.onclick = function() {
+        var inSumValue = parseInt(document.getElementById("inSum").value);
+        if(outSumValue == inSumValue){
+            inSumText.style.backgroundColor="green";
+        } else {
+            inSumText.style.backgroundColor="red";
+        }
+    }
+
+    inSum.onclick = function() {
+
+    }
+    </script>
+
+</body>
+</html>
