@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Więckowski Łukasz">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form>
+            <input type="text" id="firstname" placeholder="Imię" value="imie">
+            <input type="text" id="lastname" placeholder="Nazwisko" value="nazwisko"><br>
+            <input type="text" id="city" placeholder="Miejscowość" value="miejscowość">
+            <input type="text" id="grade" placeholder="Klasa" value="klasa"><br>
+            <button type="button" onclick="f ()">Potwierdź</button>
+            <button type="reset">Wyczyść</button>
+        </form>
+    </main>
+    <div id="output"></div>
+    <script>
+        output = document.getElementById("output");
+        function f () {
+            firstname = new String(firstname.value);
+            lastname = new String(lastname.value);
+            city = new String(city.value);
+            grade = new String(grade.value);
+
+            //output.innerHTML=firstname+lastname+city+grade;
+            username = new String("");
+            username = concat(firstname.substring(0, 3), lastname.substring(0, 3), grade.substring(0, 3));
+            output.innerHTML=username;
+        }
+    </script>
+</body>
+</html>

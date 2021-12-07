@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Więckowski Łukasz">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form>
+            <input type="password" id="password" placeholder="Hasło">
+            <button type="button" onclick="f ()">Potwierdź</button>
+        </form>
+    </main>
+    <div id="output"></div>
+    <script>
+        output = document.getElementById("output");
+        function f () {
+            password = new String(password.value);
+
+            if (password == "") {
+                output.innerHTML="Wprowadź hasło";
+            } else {
+                if (password.length >= 10 
+                    && password.search("[0-9]") != -1 
+                    && password.search("[a-z]") != -1 
+                    && password.search("[A-Z]") != -1) {
+                    output.innerHTML = "Hasło poprawne";
+                } else if (password.length <= 4) {
+                    output.innerHTML = "Hasło jest za krótkie";
+                } else if (4 <= password.length <= 10 
+                    && password.search("[0-9]") != -1 
+                    || password.search("[a-z]") != -1 
+                    || password.search("[A-Z]") != -1) {
+                    output.innerHTML = "Hasło średnie";
+                } 
+            }
+        }
+    </script>
+</body>
+</html>
