@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Więckowski Łukasz">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form>
+            <input type="text" id="firstname" placeholder="Imię">
+            <input type="text" id="lastname" placeholder="Nazwisko"><br>
+            <input type="text" id="city" placeholder="Miejscowość">
+            <input type="text" id="grade" placeholder="Klasa"><br>
+            <button type="button" onclick="f ()">Potwierdź</button>
+            <button type="reset">Wyczyść</button>
+        </form>
+    </main>
+    <div id="output"></div>
+    <script>
+        output = document.getElementById("output");
+        function f () {
+            firstname = new String(firstname.value);
+            lastname = new String(lastname.value);
+            city = new String(city.value);
+            grade = new String(grade.value);
+
+            //output.innerHTML=firstname+lastname+city+grade;
+
+            //login imie(0,3)_nazwisko(0,3)_klasa(0,3)
+            username = new String(firstname.substring(0,3)+"_"+lastname.substring(0,3)+"_"+grade.substring(0,3));
+            output.innerHTML+="<p>Login: "+username+"</p>";
+            
+            //hasło imie(-3) nazwisko(-3)
+            password = new String(firstname.substr(-3)[0].toUpperCase()+firstname.substr(-2).toLowerCase()+lastname.substr(-3)[0].toUpperCase()+lastname.substr(-2).toLowerCase());
+            output.innerHTML+="<p>Hasło: "+password+"</p>";
+
+            //email imie.nazwisko@miejscowosc.pl
+
+            email = new String(firstname.toLowerCase()+"."+lastname.toLowerCase()+"@"+city.toLowerCase()+".pl");
+            output.innerHTML+="<p>Email: <a href='mailto:"+email+"'>"+email+"</a></p>";
+        }
+    </script>
+</body>
+</html>
