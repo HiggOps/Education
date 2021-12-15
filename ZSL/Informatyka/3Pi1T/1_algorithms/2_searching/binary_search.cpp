@@ -25,6 +25,10 @@ int main() {
     int sortedArray[]={1,1,3,3,6,7,8,9,12,15};
     int sizeofSortedArray=sizeof(sortedArray)/sizeof(sortedArray[0]);
 
+    for(i = 0; i < 430; i++) Z[i] = i;
+    int sizeofZ = sizeof(Z)/sizeof(Z[0]);
+
+
     //binarySearch(which Array, what is being searched, size of Array);
-    binarySearch(sortedArray,7, sizeofSortedArray);
+    binarySearch(Z,7, sizeofZ);
 }

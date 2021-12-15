@@ -15,6 +15,11 @@
         //mysqli("adres hosta","nazwa użytkownika, który się łączy","hasło","nazwa database");
         require_once './scripts/connect.php';
         //$sql = "SELECT * FROM `users`"; //wybranie wszystkich danych z tabeli users
+        /* BUDOWA tabel
+            tabela users
+            id, name, surname, 
+
+        */
         $sql = "SELECT * FROM `users` INNER JOIN `cities` ON users.cityid=cities.cityid"; //wybranie wszystkich danych z tabeli users z podłączeniem do tabeli cities
         $result=$connect->query($sql);
         //$connect->query($sql) to zapytanie o wybrane dane // nie musi być jako wartość
