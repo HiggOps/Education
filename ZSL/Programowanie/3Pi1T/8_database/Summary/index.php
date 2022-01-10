@@ -47,7 +47,11 @@
 
         echo "</table>";
 
-        if (isset($_GET['addentry'])) {
+
+
+        if (!isset($_GET['addentry'])) {
+            echo '<p><a href="./index.php?addentry=""">Dodaj wejście</a></p>';
+        } else {
             echo <<< ADDENTRY
                 <form action="./add_entry.php" method="POST">
                     <p><input type="text" name="cars_brand" placeholder="Marka"></p>
@@ -57,8 +61,6 @@
                     <p><input type="submit" value="Zatwierdź"></p>
                 </form>
             ADDENTRY;
-        } else {
-            echo '<p><a href="./index.php?addentry=""">Dodaj wejście</a></p>';
         }
         
         $connect->close();

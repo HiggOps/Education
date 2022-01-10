@@ -1,5 +1,4 @@
 <?php
-   
     foreach ($_POST as $key => $value) {
         if (empty($value)) {
             header('location: ./index.php?error=Wypełnij wszystkie pola');
@@ -13,7 +12,7 @@
                       VALUES (NULL, '$_POST[cars_brand]', '$_POST[cars_model]', '$_POST[cars_sellerid]', '$_POST[cars_when]')";
     $connect->query($sql);
 
-    if ($connect->affected_rows == 1) {
+    if ($connect->affected_rows) {
         header('location: ./index.php?error=Prawidłowo dodano wejście');
     } else {
         header('location: ./index.php?error=Nieprawidłowo dodano wejście');
