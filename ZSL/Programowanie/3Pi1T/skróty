@@ -1,0 +1,9 @@
+ctrl + shift + arrow = zaznaczenie od kursora w daną stronę co spację
+
+to create auto start
+
+xampp -> apache (config) -> php.ini -> session.auto_start=0 change to 1 -> restart server
+
+adminlte - github
+fontawesome.com
+
