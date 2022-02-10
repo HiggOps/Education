@@ -8,7 +8,7 @@ body {
 .banner {
     display: block;
     background-color: rgb(255, 213, 162);
-    align-content: center;
+    text-align: center;
     padding: 20px;
 }
 

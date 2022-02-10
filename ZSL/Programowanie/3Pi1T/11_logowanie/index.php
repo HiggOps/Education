@@ -24,6 +24,22 @@
         <input type="email" name="email2" placeholder="Powtórz adres email"><br><br>
         <input type="password" name="pass1" placeholder="Podaj hasło"><br><br>
         <input type="password" name="pass2" placeholder="Powtórz hasło"><br><br>
+        <!--<select name="cityid">
+            <option value="1">Poznań</option>
+            <option value="2">Września</option>
+            <option value="3">Warszawa</option>
+        </select> <br><br> -->
+        <!--z pobieraniem z bazy danych-->
+        <?php
+            require_once './scripts/connect.php';
+            $sql = "SELECT * FROM city";
+            $result=$connect->query($sql);
+            echo "<select name=cityid>";
+            while($city=$result->fetch_assoc()) {
+                echo "<option value=$city[id]>$city[city]</option>";
+            }
+            echo "</select>";
+        ?>
         <input type="date" name="birthday"> Data urodzenia <br><br>
         <input type="submit" value="Zarejestruj się">
     </form>

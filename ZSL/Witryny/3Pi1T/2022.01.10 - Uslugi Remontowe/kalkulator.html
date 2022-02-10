@@ -9,9 +9,8 @@
 </head>
 <body>
     <banner class="banner">
-        <!--grafika logo
-            <img src="logo.png" width="600px">
-        -->
+        <!--grafika logo-->
+        <img src="logo.png">
     </banner>
     <div class="menu">
         <ul>
@@ -24,14 +23,25 @@
     </div>
     <main>
         <h1>Malowanie pokoju: 8 zł na m2</h1>
-        <p>
             <form>
-                Wymiary pokoju w metrach:
+                
+                <p>Wymiary pokoju w metrach:
                 <input type="number" id="width">
-                <input type="number" id="length"><br>
-                <button>OBLICZ KOSZT</button>
+                <input type="number" id="length"></p>
+                <button type="button" onclick="f ()">OBLICZ KOSZT</button>
+                
             </form>
-        </p>
+            <div id="output"></div>
+        <script>
+            function f () {
+                var width = document.getElementById("width").value * 2 * 2.7;
+                var length = document.getElementById("length").value * 2 * 2.7;
+                var totalarea = width + length;
+                var totalcost = (width + length) * 8;
+                document.getElementById("output").innerHTML = "<p>Całkowita powierzchnia ścian: " + totalarea
+                                                                + "</p><p>Koszt malowania: " + totalcost + " zł";
+            }
+        </script>
     </main>
     <footer> <!--align right-->
         <p>Autor strony: Więckowski Łukasz</p>
