@@ -18,46 +18,48 @@
             <a href="blog.html">Blog o Kawie</a>
             <a href="http://gatunki-kawy.pl">Odwiedź także</a>
         </div>
-        <div id="baner">
+        <div id="banner">
             <h1>Hurtownia Kawy</h1>
         </div>
-        <div id="lewy">
+        <div id="left">
             <h2>Oferta</h2>
             <ol>
                 <li>Kawa palona Arabica</li>
                 <li>Kawa palona Robusta</li>
                 <li>Kawa bezkofeinowa</li>
-                <li id="el4">Kawa zielona</li>
+                <li id="line-through">Kawa zielona</li>
             </ol>
         </div>
-        <div id="prawy">
+        <div id="right">
             Podaj numer kawy<br>
-            <input type="number" id="numerKawy"><br>
-            Podaj wagę w dekagramach<br>
-            <input type="number" id="waga"><br>
-            <input type="button" value="Zamów" id="przycisk">
+            <form>
+                <input type="number" id="coffeeNumber"><br>
+                Podaj wagę w dekagramach<br>
+                <input type="number" id="weight"><br>
+                <button type="button" onclick="f ()">Zamów</button>
+            </form>
             <div id="tekst"></div>
-            <script>
-                var przycisk = document.getElementById("przycisk"); 
-                var tekst = document.getElementById("tekst");
-                przycisk.onclick = function() {
-                    var numerKawy = document.getElementById("numerKawy").value;
-                    var waga = document.getElementById("waga").value;
-                    var cena = 0;
-                    if(numerKawy == 1) {
-                        cena = waga * 5;
-                    }else if(numerKawy == 2) {
-                        cena = waga * 7;
-                    }else if(numerKawy == 3) {
-                        cena = waga * 6;
+            <script> 
+                function f() {
+                    var coffeeNumber = document.getElementById("coffeeNumber").value;
+                    var weight = document.getElementById("weight").value;
+                    var price = 0;
+                    if(coffeeNumber == 1) {
+                        price = weight * 5;
+                    }else if(coffeeNumber == 2) {
+                        price = weight * 7;
+                    }else if(coffeeNumber == 3) {
+                        price = weight * 6;
                     }else {
-                        cena = 0;
+                        price = 0;
                     }
-                    tekst.innerHTML = "Koszt zamówienia wynisi " + cena + " zł";
+                    document.getElementById("tekst").innerHTML = "Koszt zamówienia wynisi " + price + " zł";
                 }
+
+
             </script>>
         </div>
-        <div id="stopka">Stronę przygotował: <b>Oskar Pakulski</b></div>
+        <div id="footer">Stronę przygotował: <b>Więckowski Łukasz</b></div>
     </body>
 </body>
 </html>
