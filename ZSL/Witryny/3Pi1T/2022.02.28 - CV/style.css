@@ -1,5 +1,6 @@
 main { 
-    width: 100%; 
+    width: 80%;
+    margin: 0 10% 0 10%;
 } 
 .float-left {
     float: left; 
@@ -33,4 +34,11 @@ main {
     margin: 20px;
     padding-top: 5%;
     text-align: center;
+}
+img {
+    border-color: black;
+    margin: 2%;
+}
+img:hover {
+    border-color: blue;
 }
