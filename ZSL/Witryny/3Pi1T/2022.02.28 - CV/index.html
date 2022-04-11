@@ -9,37 +9,159 @@
 
 </head>
 <body>
-    <main>
-        <div class="float-left">
-            <p id="title">Moje CV</p>
-            <p>Łukasz - znam języki programowania ..., umiem ...</p>
-            <p>Znam język angielski na poziomie ..., inny język,</p>
-            <p>Jestem odpowiedzialny, punktualny, ...</p>
-            <p>Moje zainteresowania (hobby): sport, ...</p>
 
-            <p>Tutaj zobaczysz moje projekty</p>
-        </div>
+<main>
 
-        <div class="float-right">
-            <p>Dzisiaj jest</p>
-            <script>
-                //zegar
-            </script>
-        </div>
+<div class="float-left">
+    <p id="title">Moje CV</p>
+    <p>Łukasz - znam języki programowania ..., umiem ...</p>
+    <p>Znam język angielski na poziomie ..., inny język,</p>
+    <p>Jestem odpowiedzialny, punktualny, ...</p>
+    <p>Moje zainteresowania (hobby): sport, ...</p>
 
-        <div class="projects">
+    <p>Tutaj zobaczysz moje projekty</p>
+</div>
+<!-- zegar -->
+<div class="float-right" id="date"></div>
+<script>
+    setInterval(date, 1000);
+    function date() {
+        var date = new Date ();
+        var weekday = date.getDay().toString();
+            switch (weekday) {
+                case "1":
+                    var weekday="poniedziałek";
+                    break;
+                case "2":
+                    var weekday="wtorek";
+                    break;
+                case "3":
+                    var weekday="środa";
+                    break;
+                case "4":
+                    var weekday="czwartek";
+                    break;
+                case "5":
+                    var weekday="piątek";
+                    break;
+                case "6":
+                    var weekday="sobota";
+                    break;
+                default: 
+                    var weekday ="niedziela";
+                    break;
+            }
+        var day = date.getDate().toString(); 
+            if (day.length < 2) {
+                day = "0"+day;
+            }
+        var month = date.getMonth().toString();
+            switch (month) {
+                case "1":
+                    var month = "stycznia";
+                    break;
+                case "2":
+                    var month = "lutego";
+                    break;
+                case "3":
+                    var month = "marca";
+                    break;
+                case "4":
+                    var month = "kwietnia";
+                    break;
+                case "5":
+                    var month = "maja";
+                    break;
+                case "6":
+                    var month = "czerwca";
+                    break;
+                case "7":
+                    var month = "lipieca";
+                    break;
+                case "8":
+                    var month = "sierpnia";
+                    break;
+                case "9":
+                    var month = "września";
+                    break;
+                case "10":
+                    var month = "listopada";
+                    break;
+                case "11":
+                    var month = "października";
+                    break;
+                default:
+                    var month = "grudnia";
+                    break;
+            }
+        var year = date.getFullYear();
 
-        </div>
+        var hours = date.getHours().toString();
+            if (hours.length < 2) {
+                hours = "0"+hours;
+            }
+        var minutes = date.getMinutes().toString();
+            if (minutes.length < 2) {
+                minutes = "0"+minutes;
+            }
+        var seconds = date.getSeconds().toString();
+            if (seconds.length < 2) {
+                seconds = "0"+seconds;
+            }
+        document.getElementById("date").innerHTML="<p>Dzisiaj jest " + weekday + "</p><p>"
+                                                    + day +" " + month +" "+ year+"</p><p>"
+                                                    +hours+":"+minutes+":"+seconds;
+    }   
+    date();
+</script>
+<!-- projekty po 2 na rząd-->
+<div class="projects">
 
-        <div class="grade">
-            <select>
-                <script>
-                    for (var i = 1; i < 6; i++) {
-                        document.write("<option id="+$i+">"+$i+"</option>");
-                    }
-                </script>
-            </select>
-        </div>
-    </main>
+</div>
+<!-- ocena - sam dół środek-->
+<div class="grade">
+    <form method="get">
+    <select id="mark">
+        <script>
+            for (var i = 1; i <= 6; i++) {
+                document.write("<option value="+i+">"+i+"</option>");
+            }
+            
+        </script>
+    </select>
+    <button type="button" onclick="f ()">Oceń</button><br>
+    </form>
+    <p id="grade">Otrzymałem ocenę: ...!!</p>
+</div>
+    <script>
+        function f () {
+            var mark = document.getElementById("mark").value;
+            var grade = document.getElementById("grade");
+            
+            grade.innerHTML="<p>Otrzymałem ocenę: " + mark + "!!</p>";
+            switch (mark) {
+                case "1":
+                case "2":
+                    grade.style.color="red";
+                    grade.style.fontWeight="normal";
+                    break;
+                case "3":
+                case "4":
+                    grade.style.color="blue";
+                    grade.style.fontWeight="normal";
+                    break;
+                default:
+                    grade.style.color="green";
+                    grade.style.fontWeight="bold";
+                    break;
+            }
+
+
+
+        }
+    </script>
+    
+</main>
+
 </body>
 </html>

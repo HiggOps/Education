@@ -3,12 +3,12 @@ main {
 } 
 .float-left {
     float: left; 
-    width: 50%;
+    width: 70%;
 }
 .float-right { 
     float: right;
-    text-align: center;
-    width: 50%; 
+    text-align: left;
+    width: 30%; 
 }
 .element-left { 
     margin-left: 5%;
@@ -19,6 +19,9 @@ main {
     height: 100%; 
 }
 .title {
+    text-align: center;
+}
+.grade {
     text-align: center;
 }
 .textcvv {
