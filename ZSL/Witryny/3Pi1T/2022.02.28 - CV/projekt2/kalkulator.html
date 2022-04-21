@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="remont.css">
+    <title>Wyremontuj mieszkanie</title>
+</head>
+<body>
+    <banner class="banner">
+        <!--grafika logo-->
+        <img src="logo.png">
+    </banner>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">O NAS</a></li>
+            <li><a href="kontakt.html">KONTAKT</a></li>
+            <li><a href="kalkulator.html">KALKULATOR</a></li> 
+            <!--new tab-->
+            <li><a href="http://www.jakremontowac.pl/" target="_blank" rel="noopener noreferrer">POLECANE STRONY</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>Malowanie pokoju: 8 zł na m2</h1>
+            <form>
+                
+                <p>Wymiary pokoju w metrach:
+                <input type="number" id="width">
+                <input type="number" id="length"></p>
+                <button type="button" onclick="f ()">OBLICZ KOSZT</button>
+                
+            </form>
+            <div id="output"></div>
+        <script>
+            function f () {
+                var width = document.getElementById("width").value * 2 * 2.7;
+                var length = document.getElementById("length").value * 2 * 2.7;
+                var totalarea = width + length;
+                var totalcost = (width + length) * 8;
+                document.getElementById("output").innerHTML = "<p>Całkowita powierzchnia ścian: " + totalarea
+                                                                + "</p><p>Koszt malowania: " + totalcost + " zł";
+            }
+        </script>
+    </main>
+    <footer> <!--align right-->
+        <p>Autor strony: Więckowski Łukasz</p>
+    </footer>
+</body>
+</html>

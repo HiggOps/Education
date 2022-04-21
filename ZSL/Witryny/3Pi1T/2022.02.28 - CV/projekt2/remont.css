@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* banner */
+
+.banner {
+    display: block;
+    background-color: rgb(255, 213, 162);
+    text-align: center;
+    padding: 20px;
+}
+
+/* menu */
+
+div.menu ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+div.menu ul li {
+    display: inline;
+    float: left;
+    width: 25%;
+    background-color: rgb(191, 112, 17);
+    color: white;
+    text-align: center;
+    font-size: 150%;
+
+}
+
+a {
+    color: white;
+}
+
+/* main */
+
+main {
+    display: block;
+}
+
+button {
+    background-color: brown;
+    border: solid 2px brown;
+    color: white;
+    font-style: bold;
+    padding: 10px;
+
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    background-color: rgb(191, 112, 17);
+    float: right;
+    text-align: right;
+    color: white;
+}
