@@ -57,7 +57,7 @@ Default input is always string
 
 
 *2D List:
- ex_2D = [ [1,2,3] ,\ [4,5,6] , [7,8,9] , [0] ]
+ ex_2D = [ [1,2,3] , [4,5,6] , [7,8,9] , [0] ]
  for row in ex_2D:
      for col in row:
          print(col)
