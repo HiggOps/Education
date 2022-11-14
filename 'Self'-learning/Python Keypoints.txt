@@ -30,9 +30,9 @@ Default input is always string
 *IF
  or- || , and- && , not() - negate 
  Syntax-
- if condition1 :
+ if condition1:
  elif condition2:
- else :
+ else:
 
 
 *Dictionaries:
