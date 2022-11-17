@@ -1,0 +1,25 @@
+Temat: Podstawowe instrukcje SQL. Budowa bazy danych.       09.09.2022
+
+1. Polecenia:
+    a) Bazy Danych:
+        - SHOW DATABASES;               - wyświetlanie dostępnych baz danych
+        - CREATE DATABASE nazwa_bazy;   - tworzenie bazy danych
+        - USE nazwa_bazy;               - wejście do bazy danych (w terminalu)
+        - DROP DATABASE nazwa_bazy;     - usuwanie bazy
+    b) Tabel:
+        - SHOW TABLES;                      - wyświetlanie listy tabel bazy
+        - CREATE TABLE `nazwa_tabeli`
+            (`nazwa_pola1` typ_pola1 ograniczenia,
+             `nazwa_pola2` typ_pola2 ograniczenia)     - tworzenie bazy danych
+        - DESCRIBE `nazwa_tabeli`           - wejście do struktury tabeli (w terminalu)
+        - ALTER TABLE `nazwa_tabeli` opcje  - modyfikowanie tabeli
+        - DROP TABLE `nazwa_tabeli`         - usuwanie tabeli wraz ze strukturą tabeli
+        - DELETE TABLE `nazwa_tabeli`       - usuwanie tabeli, bez usunięcia struktury tabeli
+
+Temat: Ograniczenia w języku SQL
+    1. Ograniczenia (constraints) w SQL
+        - PRIMARY KEY   - kolumna jest kluczem głównym tabeli (zawiera w sobie NOT NULL i UNIQUE)
+        - NOT NULL  - kolumna nie może posiadać pól z wartością null (czyli brak danych)
+        - UNIQUE    - kolumna musi mieć wartośći unikalne, czyli żadna wartość nie może się powtarzać
+        - FOREIGN KEY   - kolumna jest kluczem obcym
+        - CHECK         - dane w kolumnie spełniają pewien warunek

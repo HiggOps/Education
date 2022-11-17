@@ -1,0 +1,48 @@
+05.09.2022
+Temat: Zapoznanie uczniów z wymaganiami edukacyjnymi niezbędnymi do otrzymania przez ucznia poszczególnych śródrocznych i rocznych ocen wynikających z relizacji podstawy programowanej.
+
+Temat: Regulamin pracowni komputerowej oraz przepisy BHP.
+
+Temat: Język programowania SQL.
+
+MySQL - system zarządzania relacyjnymi bazami danych, który wykorzystuje język SQL.
+
+SQL (ang. Structured Query Language) - strukturalny język zapytań wykorzystywany do:
+    - tworzenia
+    - usuwania
+    - modyfikowania
+obiektów baz danych oraz:
+    - wprowadzania 
+    - zarządzania 
+danych w bazie danych.
+
+Instrukcje języka SQL dzielimy na 5 grupy:
+    -   język definiowania danych (ang. Data Definition Language - DDL) - definiowanie struktury bazy danych w tym kontrola integralności.
+        Kontola obiektów bazy danych.
+            Polecenia: 
+                - CREATE - tworzenie obiektów
+                - DROP - usuwanie obiektów
+                - ALTER - modyfikowanie obiektów
+
+    -   język manipulowania danymi (ang. Data Manipulation Language - DML) - wprowadzanie, modyfikowanie, kasowanie oraz przeglądanie danych.
+        Kontrola danych w obiektach bazy danych.
+            Polecenia:
+                - INSERT - wprowadzenie danych
+                - DELETE - usunięcie danych
+                - UPDATE - modyfikacja danych
+
+    -   język kontroli danych (ang. Data Control Language - DCL) - nadawanie i odbieranie uprawnień do korzystania z bazy danych;
+        Administracja (zarządzenie uprawnieniami) bazą danych.
+            Polecenia:
+                - GRANT - nadawanie uprawnień
+                - REVOKE - anuluje wcześniej nadane lub odebrane uprawnienia
+                - DENY - odbieranie uprawnień
+
+    -   język zapytań (ang. Data Query Language - DQL) - tworzenie zapytań, podzapytań.
+        Pobieranie danych z obiektów baz danych.
+            Polecenia:
+                - SELECT - wybranie danych
+
+    - język tranzakcji
+
+Każda instrukcja musi kończyć się znakiem ; (średnik).

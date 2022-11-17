@@ -1,0 +1,44 @@
+Temat: Typy danych MySQL. 09.09.2022
+
+1. Typy Danych - określają jakiego rodzaju informacje mogą być przechowywane w poszczególnych kolumnach tabel
+
+    a) Typ Liczbowy:
+                Typy Danych     |   Przedział wartości  |   Długość w bajtach
+                                |                       |
+        - całkowite             |   <-2^7;2^7> lub 
+            - TINYINT           |   
+            - SMALLINT          |
+            - MEDIUMINT         |
+            - INT (unsignal)    |
+            - BIGINT            |
+        - zmniennoprzecinkowe   |
+            - FLOAT             |
+            - DOUBLE            |
+        - stałoprzecinkowe      |
+            - DECIMAL(liczba cyfr,liczba cyfr po przecinku) | 0-65 cyfr| liczba cyfr + 1 lub 2
+            - NUMERIC(liczba cyfr,liczba cyfr po przecinku) | 
+
+    b) Typ logiczny:
+        - BOOL lub BOOLEAN przechowywany jest jak tinyint(1). Wartość 0 oznacza wartość logiczną fałsz (false),
+        a każda inna wartość liczbowa oznacza wartość logiczną prawda (true).
+    
+    c) Typ daty i czasu:
+                Typy Danych     |       Przedział wartości      |   Długość w bajtach
+                                |                               |       
+        - DATE                  | od 1000-01-01 do 9999-12-31   |
+        - DATETIME  
+        - TIME                  | od -838:59:59 do
+        - TIMESTAMP
+        - YEAR
+        - 
+    d) Typ tekstowy:
+                Typy Danych     |       Przedział wartości      |   Długość w bajtach
+        - CHAR(M)               | <0;2^8)
+        - VARCHAR(M)            | <0;2^16)
+        - BINARY(M)             | 
+        - VARBINARY(M)          |
+        - TINYBLOB              |
+        - BLOB                  |
+        - TEXT                  |
+        - ENUM('war1','war2',...) przechowuje jedną wartość z wcześniej predefiniowanej listy elementów (1-65 635 wartości)
+        - SET ('war1','war2',...) przechowuje jedną wartość lub więcej wartości wybranych z listy predefiniowanych elementów (1-64). Możliwe jest niewybranie żadnej z wartości.
