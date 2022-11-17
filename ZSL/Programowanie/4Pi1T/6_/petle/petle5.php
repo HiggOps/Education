@@ -21,7 +21,7 @@
 
         function sumFirstPrimes($x){
             $i = 0;
-            $last_used = 0;
+            $last_used = 1;
             $sum = 0;
             while ($i < $x) {
                 if (isPrime($last_used)) {
@@ -33,7 +33,7 @@
             return $sum;
         }
 
-        echo sumFirstPrimes(100);
+        echo sumFirstPrimes(2);
     ?>
 </body>
 </html>
