@@ -9,8 +9,8 @@
 </head>
 <body>
     <?php
-    
-
+        echo "I'll learn PHP<br>";
+        echo "C:\\xampp\htdocs";
     ?>
 </body>
 </html>

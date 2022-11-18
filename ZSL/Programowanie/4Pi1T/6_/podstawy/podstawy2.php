@@ -8,9 +8,15 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    
+    <form method="POST">
+        <input type="text" name="name">
+        <input type="submit" value="OK">
+    </form>
 
+    <?php
+        if (isset($_POST['name'])) {
+            echo $_POST['name'];
+        }
     ?>
 </body>
 </html>
