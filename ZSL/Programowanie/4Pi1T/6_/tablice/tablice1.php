@@ -9,7 +9,16 @@
 </head>
 <body>
     <?php
-    
+        function oddNumbers($array, $x) {
+            $arr = [];
+            foreach ($array as $value) {
+                if ($value % 2 == 1)
+                    array_push($arr, $value);
+                if (sizeof($arr,) )
+            }
+            return $arr;
+        }
+        echo oddNumbers($array, $x)
 
     ?>
 </body>
