@@ -15,7 +15,10 @@
 </head>
 <body>
 <?php 
-
+    /*
+        Wyświetl na stronie zawartość folderu htdocs (dla chętnych także struktura podkatalogów), oddzielnie pliki i katalogi, 
+        Wyświetl także datę ostatniej modyfikacji, rozmiar i uprawnienia do pliku
+    */
     $dir = 'C:/xampp/htdocs';
     echo "<table><tr><th colspan=7>Foldery</th></tr><tr><th>file name</th><th>type</th><th>parent</th><th>last modification</th><th>size</th><th>permissions</th></tr>";
     function printFolderStructure($dir) { 
@@ -79,7 +82,7 @@
                     $modTime = date("m-d-Y H:i",filemtime($newDir));
                     $size = filesize($newDir)."bytes";
                     $perms = substr(sprintf('%o', fileperms($newDir)), -4);
-                    $parent = $newDir;
+                    $parent = $dir;
                     $type = filetype($newDir);
 
                     echo '<tr><td>' . $file .  '</td><td>' . $type . '</td><td>' . $parent . '</td><td>' . $modTime . '</td><td>'. $size .'</td><td>' . $perms . '</td></tr>'; 
@@ -91,26 +94,7 @@
     printFileStructure($dir);
 
     echo "</table>";
-        /*
-            Wyświetl na stronie zawartość folderu htdocs (dla chętnych także struktura podkatalogów), oddzielnie pliki i katalogi, 
-            Wyświetl także datę ostatniej modyfikacji, rozmiar i uprawnienia do pliku
-        */
 
-        /*
-        if ($handle = opendir("../../../../../htdocs/")) {
-            echo "<table><tr><th>file name</th><th>last modification</th><th>size</th><th>permissions</th></tr>";
-            while (False !== ($entry = readdir($handle))) {
-                if ($entry != "." && $entry != "..") {
-                    $modTime = date("m-d-Y H:i",filemtime("../../../../../htdocs/".$entry));
-                    $size = filesize("../../../../../htdocs/".$entry)."bytes";
-                    $perms = substr(sprintf('%o', fileperms("../../../../../htdocs/".$entry)), -4);
-                    echo "<tr><td>$entry</td><td>$modTime</td><td>$size</td><td>$perms</td></tr>";
-                }
-            }
-            echo "</table>";
-            closedir($handle);
-        }
-        */
     ?>
 </body>
 </html>
