@@ -25,17 +25,10 @@
     
         // open the current directory 
         $dirlist = opendir($dir); 
-    
-        // set counter 
-        $counter = 0; 
-    
-        // print the opening table tag 
-        
-    
+
         // loop through the directory 
         while ($file = readdir($dirlist)) { 
             if ($file != '.' && $file != '..') { 
-                $counter++; 
                 $newDir = $dir . '/' . $file; 
                 if (is_dir($newDir)) { 
                     $modTime = date("m-d-Y H:i",filemtime($newDir));
@@ -64,17 +57,10 @@
     
         // open the current directory 
         $dirlist = opendir($dir); 
-    
-        // set counter 
-        $counter = 0; 
-    
-        // print the opening table tag 
-        
-    
+
         // loop through the directory 
         while ($file = readdir($dirlist)) { 
             if ($file != '.' && $file != '..') { 
-                $counter++; 
                 $newDir = $dir . '/' . $file; 
                 if (is_dir($newDir)) { 
                     printFileStructure($newDir); 
