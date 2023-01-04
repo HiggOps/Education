@@ -9,9 +9,9 @@
 </head>
 <body>
     <?php
-        $text = "A00";
+        $text = "text";
         for ($i = 1; $i < 5; $i++){
-            $text++;
+            $text .= " text";
         }
         echo $text;
     ?>
