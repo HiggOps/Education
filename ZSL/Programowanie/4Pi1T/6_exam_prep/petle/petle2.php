@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-        $file = fopen("./google/google.html", "r");
+        $file = file("./google/google.html", "r");
 
         if ($file) {
             $i = 1;

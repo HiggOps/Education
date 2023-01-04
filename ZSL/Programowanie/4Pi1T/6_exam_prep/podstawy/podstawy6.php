@@ -10,8 +10,6 @@
 <body>
     <?php
         function checkCircles($Sx1, $Sy1, $r1, $Sx2, $Sy2, $r2) {
-            $a = $Sx1 - $Sx2;
-            $b = $Sy1 - $Sy2;
             $d = sqrt(pow($Sx1 - $Sx2, 2) + pow($Sy1 - $Sy2, 2));
             $addR = $r1 + $r2;
             $subR = $r1 - $r2;

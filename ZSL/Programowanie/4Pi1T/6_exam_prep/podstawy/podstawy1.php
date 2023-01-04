@@ -9,11 +9,10 @@
 </head>
 <body>
     <?php
-        $text = "text";
-        for ($i = 1; $i < 5; $i++){
-            $text .= " text";
-        }
-        echo $text;
+        echo <<< SAY
+            "I'll learn PHP"<br>
+            "C:\\xampp\htdocs"
+        SAY;
     ?>
 </body>
 </html>

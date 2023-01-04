@@ -10,15 +10,13 @@
 <body>
     <?php
         $num = 21;
-        if ($num > 40) {
-            echo "$num jest większe od 40";
-        } elseif ($num > 30) {
-            echo "$num jest większe od 30";
-        } elseif ($num > 20) {
-            echo "$num jest większe od 20";
-        } elseif ($num > 10) {
-            echo "$num jest większe od 10";
+        for ($i = 1; $i <= 4; $i++) {
+            $temp = $i * 10;
+            if ($temp < $num)
+                echo "$num większe od $temp<br>";
+                exit;
         }
+
     ?>
 </body>
 </html>

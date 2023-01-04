@@ -10,15 +10,20 @@
 <body>
     <?php
         function oddNumbers($array, $x) {
-            $arr = [];
-            foreach ($array as $value) {
-                if ($value % 2 == 1)
-                    array_push($arr, $value);
-                if (sizeof($arr,) )
+            $arr = array();
+
+            while (count($arr) < $x) {
+                foreach ($array as $value) {
+                    if ($value % 2 == 1)
+                        array_push($arr, $value);
+                    if (count($arr) == $x)
+                        return $arr;
+                }
             }
             return $arr;
         }
-        echo oddNumbers($array, $x)
+        $array = array(2,3,5,8,9,47,80,87);
+        print_r(oddNumbers($array, 7));
 
     ?>
 </body>
