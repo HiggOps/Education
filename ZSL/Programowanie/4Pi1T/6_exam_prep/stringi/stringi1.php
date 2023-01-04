@@ -9,16 +9,15 @@
 </head>
 <body>
     <?php
-        $file = file("./google/google.html", "r");
-
-        if ($file) {
-            $i = 1;
-            while (($line = fgets($file)) !== false) {
-                echo "$i ".htmlspecialchars($line)."<br>";
-                $i++;
+        function str2_in_str1($text, $text2) {
+            $len = strlen($text2) * -1;
+            if (substr($text, $len) == $text2) {
+                return "'$text2' is in '$text'";
+            } else {
+                return "'$text2' is not in '$text'";
             }
-            fclose($file);
         }
+        echo str2_in_str1("test", "nie jest");
     ?>
 </body>
 </html>

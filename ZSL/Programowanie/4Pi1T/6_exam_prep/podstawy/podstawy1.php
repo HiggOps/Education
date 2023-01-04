@@ -9,16 +9,10 @@
 </head>
 <body>
     <?php
-        $file = file("./google/google.html", "r");
-
-        if ($file) {
-            $i = 1;
-            while (($line = fgets($file)) !== false) {
-                echo "$i ".htmlspecialchars($line)."<br>";
-                $i++;
-            }
-            fclose($file);
-        }
+        echo <<< SAY
+            "I'll learn PHP"<br>
+            "C:\\xampp\htdocs"
+        SAY;
     ?>
 </body>
 </html>

@@ -9,16 +9,16 @@
 </head>
 <body>
     <?php
-        $file = file("./google/google.html", "r");
-
-        if ($file) {
-            $i = 1;
-            while (($line = fgets($file)) !== false) {
-                echo "$i ".htmlspecialchars($line)."<br>";
-                $i++;
+        function changeWords($text, $word1, $word2) {
+            if ((str_contains($text, $word1)) && (str_contains($text, $word2))) {
+                return strtr($text, array($word1 => $word2, $word2 => $word1));
             }
-            fclose($file);
         }
+
+        $text = "Python jest lepszy niż PHP";
+
+        echo changeWords($text, "Python", "PHP");
+
     ?>
 </body>
 </html>

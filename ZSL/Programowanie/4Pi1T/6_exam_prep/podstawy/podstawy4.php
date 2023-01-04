@@ -9,16 +9,14 @@
 </head>
 <body>
     <?php
-        $file = file("./google/google.html", "r");
-
-        if ($file) {
-            $i = 1;
-            while (($line = fgets($file)) !== false) {
-                echo "$i ".htmlspecialchars($line)."<br>";
-                $i++;
-            }
-            fclose($file);
+        $num = 21;
+        for ($i = 1; $i <= 4; $i++) {
+            $temp = $i * 10;
+            if ($temp < $num)
+                echo "$num większe od $temp<br>";
+                exit;
         }
+
     ?>
 </body>
 </html>

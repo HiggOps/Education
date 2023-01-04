@@ -8,16 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        $file = file("./google/google.html", "r");
+    <form method="POST">
+        <input type="text" name="name">
+        <input type="submit" value="OK">
+    </form>
 
-        if ($file) {
-            $i = 1;
-            while (($line = fgets($file)) !== false) {
-                echo "$i ".htmlspecialchars($line)."<br>";
-                $i++;
-            }
-            fclose($file);
+    <?php
+        if (isset($_POST['name'])) {
+            echo $_POST['name'];
         }
     ?>
 </body>
